@@ -26,7 +26,7 @@ class App {
     }
 
     public static String toString(Map<String, Integer> map) {
-        if (map.size() == 0 ) {
+        if (map.size() == 0) {
             return "{}";
         }
 
