@@ -20,7 +20,7 @@ class AppTest {
         Assertions.assertEquals(list2.get(0), 1);
         Assertions.assertEquals(list2.get(1), 2);
 
-        org.assertj.core.api.Assertions.assertThat(list2)
+        assertThat(list2)
             .isNotEmpty()
             .contains(1, 2)
             .hasSize(2);
@@ -31,7 +31,7 @@ class AppTest {
         Assertions.assertEquals(list4.size(), 3);
         Assertions.assertEquals(list4.containsAll(list3), true);
 
-        org.assertj.core.api.Assertions.assertThat(list3)
+        assertThat(list3)
             .isNotEmpty()
             .contains(7, 3, 10)
             .hasSize(3);
