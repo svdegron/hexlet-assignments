@@ -8,10 +8,10 @@ import java.util.TreeSet;
 // BEGIN
 public class App {
     public static LinkedHashMap<String, String> genDiff(Map<String, Object> data1, Map<String, Object> data2) {
-        final String ADDED = "added";
-        final String DELETED = "deleted";
-        final String CHANGED = "changed";
-        final String UNCHANGED = "unchanged";
+        final String added = "added";
+        final String deleted = "deleted";
+        final String changed = "changed";
+        final String unchanged = "unchanged";
 
         var result = new LinkedHashMap<String, String>();
 
@@ -21,13 +21,13 @@ public class App {
         for (var key : temps) {
             String action = "action";
             if (data1.get(key) == data2.get(key)) {
-                action = UNCHANGED;
+                action = unchanged;
             } else if (data1.get(key) == null) {
-                action = ADDED;
+                action = added;
             } else if (data2.get(key) != null) {
-                action = CHANGED;
+                action = changed;
             } else if (data1.containsKey(key) && data2.get(key) == null) {
-                action = DELETED;
+                action = deleted;
             }
 
             result.put(key, action);
