@@ -25,7 +25,7 @@ public class App {
                 System.out.println(String.format("%d", (int) Math.ceil(square)));
             }
         } catch (NegativeRadiusException e) {
-            System.out.println("Не удалось подсчитать площадь");
+            System.out.println("Не удалось посчитать площадь");
         } finally {
             System.out.println("Вычисление окончено");
         }
